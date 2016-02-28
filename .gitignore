@@ -1,0 +1,16 @@
+node_modules
+bower_components
+target
+*.log
+*.csv
+*.dat
+*.out
+*.pid
+*.gz
+*.sublime*
+*.node
+reports
+*.orig
+.idea
+.DS_Store
+dist

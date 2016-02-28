@@ -1,2 +1,2 @@
 # ng-ui-clamp
-Line Clamp (Truncating Multiline Text…)
+Directive to clamp an HTML element by adding ellipsis to it, if the content inside is too long.

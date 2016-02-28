@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:g="http://www.backbase.com/2008/gadget" xml:lang="en">
+
+<head>
+    <title>ng-ui-clamp</title>
+    <meta http-equiv="Content-Type" content="text/xml; charset=UTF-8" />
+    <!-- externals -->
+    <script src="bower_components/angular/angular.min.js"></script>
+    <!-- ui component -->
+    <script src="index.js" charset="utf-8"></script>
+    <script>
+    angular.module('app', ['dbpUIClamp'])
+        .controller('MainCtrl', function($scope) {
+            this.textOne = "Business transactions are the interactions between businesses and their customers, vendors and others with whom they do business.";
+            this.textOneOfTwo = "Business transactions are the interactions between businesses and their customers.";
+            this.clampOne = "1";
+
+            this.textTwo = "Transactions can be very simple, like buying a newspaper, or extremely complex, taking a long time and involving many companies or agencies. New technologies and management approaches are developing around the management of business transactions.";
+            this.clampTwo = "2";
+
+            this.textThree = "Transactions can be very simple, like buying a newspaper, or extremely complex, taking a long time and involving many companies or agencies. New technologies and management approaches are developing around the management of business transactions.";
+            this.clampThree = "3";
+        });
+
+    angular.element(document).ready(function() {
+        angular.bootstrap(document, ['app']);
+    });
+    </script>
+    <style type="text/css">
+    .dbp-ui-clamp-content {
+        margin: 30px;
+        border: 1px solid #000;
+        font-size: 2em;
+        line-height: 1em;
+        font-weight: 500;
+        display: block;
+        width: 50%;
+    }
+    
+    .dbp-ui-clamp-content--font {
+        font-size: 1em;
+    }
+    </style>
+</head>
+
+<body ng-controller="MainCtrl as mainCtrl">
+    <p class="dbp-ui-clamp-content" dbp-ui-clamp="mainCtrl.clampOne" ng-bind="mainCtrl.textOne"></p>
+    <h5 class="dbp-ui-clamp-content dbp-ui-clamp-content--font" ng-model="mainCtrl.textOneOfTwo" dbp-ui-clamp="mainCtrl.clampOne"></h5>
+    <p class="dbp-ui-clamp-content" ng-bind="mainCtrl.textTwo" dbp-ui-clamp="mainCtrl.clampTwo"></p>
+    <span class="dbp-ui-clamp-content" ng-bind="mainCtrl.textThree" dbp-ui-clamp="mainCtrl.clampThree"></span>
+</body>
+
+</html>

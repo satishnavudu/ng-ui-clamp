@@ -1,0 +1,31 @@
+{
+  "name": "ng-ui-clamp",
+  "version": "1.0.0",
+  "description": "Directive to clamp an HTML element by adding ellipsis to it if the content inside is too long.",
+  "main": "index.js",
+  "authors": [
+    "Srinivasan Soundararajan <srini.cug@gmail.com>"
+  ],
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "bower_components",
+    "node_modules",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.4.8"
+  },
+  "resolutions": {
+    "angular": "1.4.8"
+  },
+  "homepage": "https://github.com/srinisoundar/ng-ui-clamp",
+  "keywords": [
+    "angular",
+    "clamp",
+    "ui",
+    "text"
+  ],
+  "license": "MIT"
+}
